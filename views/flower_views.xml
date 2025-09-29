@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="flower_tree_view" model="ir.ui.view">
+        <field name="name">flower.flower.tree</field>
+        <field name="model">flower.flower</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="common_name"/>
+                <field name="scientific_name"/>
+                <field name="season_start"/>
+                <field name="season_end"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="flower_form_view" model="ir.ui.view">
+        <field name="name">flower.flower.form</field>
+        <field name="model">flower.flower</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="common_name"/>
+                        <field name="scientific_name"/>
+                        <field name="season_start"/>
+                        <field name="season_end"/>
+                        <field name="watering_frequency"/>
+                        <field name="watering_amount"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="flower_action_window" model="ir.actions.act_window">
+        <field name="name">Flowers</field>
+        <field name="res_model">flower.flower</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Flowers"
+              id="flower_menu_root"
+              action="flower_action_window"
+              web_icon="flower_shop,static/description/icon.png"/>
+</odoo>

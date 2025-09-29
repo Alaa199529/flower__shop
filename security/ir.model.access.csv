@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_flower,flower.flower.access,model_flower_flower,base.group_user,1,1,1,1
+access_flower_water,flower.water.access,model_flower_water,base.group_user,1,1,1,1

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_lot_form_view_inherit" model="ir.ui.view">
+        <field name="name">stock.lot.form.view.inherit</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <field name="is_flower" invisible="1"/>
+                    <button name="action_water_flower"
+                            string="Water Flower"
+                            type="object"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('is_flower', '=', False)]}"/>
+                </header>
+            </xpath>
+        </field>
+    </record>
+</odoo>
